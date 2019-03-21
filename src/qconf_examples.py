@@ -23,16 +23,29 @@ except ModuleNotFoundError:
 # %% [markdown]
 # # Accessing QCONF data
 #
+# ## QCONF structure
+#
+# The *QCONF* is a *json* file that represents internal (complicated) class structure of QuimP, which is partially
+# depicted [here](https://pilip.lnx.warwick.ac.uk/site/apidocs/com/github/celldynamics/quimp/doc-files/datacontainer_UML.png).
+# [Java documentation](https://pilip.lnx.warwick.ac.uk/site/apidocs/index.html) is also a good source of additional
+# information on class relationships and variable datatypes.
+#
+# There is also simple tool called `digson.py` available in `src/` folder that can render more JSON-related diagrams,
+# like this one below:
+#
+# ![diagram](images/qconf_map.png)
+#
+# Dotted lines mean that there is a list under the key and it is only first element shown in diagram. This diagram
+# was rendered with [PlantUml](http://plantuml.com/download) tool and mentioned `digson.py`:
+#
+# ```bash
+# python src/digson.py --qconf data/Stack.QCONF --out /tmp/qconf_map.txt && \
+# java -jar plantuml.jar -tpng -o images/ /tmp/qconf_map.txt
+# ```
+#
 # ## Loading QCONF files
 #
-# Assume that the whole pipeline has been run, so QCONF contains results of *ECMM*, *ANA* and *Q-Analysis*.
-# The *QCONF* is a *json* file that represents internal (complicated) class structure of QuimP, which is partially
-# depicted here:
-#
-# ![QCONF](https://pilip.lnx.warwick.ac.uk/site/apidocs/com/github/celldynamics/quimp/doc-files/datacontainer_UML.png)
-#
-# More details are available in [Java documentation](https://pilip.lnx.warwick.ac.uk/site/apidocs/index.html).
-#
+# The tutorial assumes that the whole pipeline has been run, so QCONF contains results of *ECMM*, *ANA* and *Q-Analysis*.
 # For
 # easier access we have created a helper function `it(jn, name, cellNo=0, fluoCh=0)` that contains paths of keys in
 # json tree we
