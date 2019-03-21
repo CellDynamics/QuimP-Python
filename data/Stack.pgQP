@@ -1,0 +1,45 @@
+{
+  "className": "SnakePluginList",
+  "timeStamp": {
+    "version": "19.01.01",
+    "buildstamp": "baniuk on: 2019-01-16 13:24:32",
+    "name": "QuimP"
+  },
+  "createdOn": "Wed 2019.03.20 at 09:49:24 AM GMT",
+  "obj": {
+    "sPluginList": [
+      {
+        "isActive": true,
+        "name": "Randomwalksnakefilter",
+        "config": {
+          "alpha": "400.0",
+          "beta": "50.0",
+          "iter": "10000.0",
+          "relim": "0.008",
+          "shrinkpower": "9.0",
+          "expandpower": "11.0",
+          "localmean": "false",
+          "lmwindow": "25.0",
+          "masklimits": "AC",
+          "clean": "false",
+          "maskpreview": "false"
+        },
+        "ver": "1.0.6"
+      },
+      {
+        "isActive": true,
+        "name": "Meansnakefilter",
+        "config": {
+          "window": "3.0"
+        },
+        "ver": "1.0.10"
+      },
+      {
+        "isActive": true,
+        "name": "",
+        "config": {},
+        "ver": ""
+      }
+    ]
+  }
+}
